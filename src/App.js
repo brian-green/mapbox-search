@@ -1,12 +1,16 @@
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import Map from './Map'
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      First save
-    </div>
-  );
+class App extends Component {
+  render () {
+    return (
+      <div className="App">
+        First save
+        <Map></Map>
+      </div>
+    );
+  }
 }
 
 export default App;
