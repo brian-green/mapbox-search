@@ -10,7 +10,12 @@ class Map extends Component {
 
     var map = new mapbox.Map({
       container: 'map',
-      style: 'mapbox://styles/mapbox/streets-v11'
+      style: 'mapbox://styles/mapbox/dark-v9',
+      center:[
+        -74.0060,
+         40.7128
+      ],
+      zoom: 12
       });
 
   }
@@ -18,7 +23,6 @@ class Map extends Component {
   render () {
     return (
       <div id="map">
-        Map goes here
       </div>
     );
   }
