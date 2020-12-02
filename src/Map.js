@@ -8,9 +8,10 @@ class Map extends Component {
   componentDidMount() {
     mapbox.accessToken = 'pk.eyJ1IjoiYnJpaWlhbiIsImEiOiJja2k0MHA3MWowY3R2Mnhtc25ycHE5bmcyIn0.OY0hKbYzgY24P52Lz3SHFA';
 
-    var map = new mapbox.Map({
+    const map = new mapbox.Map({
       container: 'map',
       style: 'mapbox://styles/mapbox/dark-v9',
+      //NYC
       center:[
         -74.0060,
          40.7128
@@ -18,6 +19,11 @@ class Map extends Component {
       zoom: 12
       });
 
+    //adding nav
+    const navigationControl = new mapbox.NavigationControl()
+
+    //default is top right
+    map.addControl(navigationControl)
   }
 
   render () {
